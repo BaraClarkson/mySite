@@ -149,7 +149,10 @@ header .nav .nav-bar li a:hover {
     .election-literature{
         margin-top: 10%;
     }
-    
+    .election-img {
+        margin-left: 150px;
+        
+    }
 }
 
 /* 479px */
@@ -324,11 +327,11 @@ header .nav .nav-bar li a:hover {
 .election-img {
     /* display: flex; */
     float: left;
-    width: 700px;
+    width: 60%;
 }
 .main-img{
      height: 160%;
-     width: 800px;
+     width: 100%;
      border-radius: 30px;
      position: relative;
      top: 35px;
@@ -522,6 +525,8 @@ header .nav .nav-bar li a:hover {
 
 .footer__link--items h2 {
     margin-bottom: 1%;
+    padding-bottom: 10%;
+    width: 500px;
 }
 .footer__link--items p {
 
