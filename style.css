@@ -2,8 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0 0;
+    padding: 0 0;
     font-family: 'Kumbh Sans', sans-serif;
 }
 :root {
@@ -12,13 +12,12 @@
     --dark: #292826;
 }
 .content{
-    width: 90%;
-    margin: 0 auto;
-    padding: 1%;
+      width: 90%;
+      margin: 0 auto;
+      padding: 1%;
 }
 /* Navbar Css */
 header .nav{
-    border: 1px solid gold;
     background: #fff;
     padding: 1rem 7%;
     position: fixed;
@@ -50,11 +49,15 @@ header .nav .nav-bar li a{
    text-decoration: none;
    font-size: 120%;
    text-transform: uppercase;
+    display: block;
+    transition: all 0.3s ease-out;
 }
 header .nav .nav-bar li a:hover {
    color: lime;
    transform: 0.4s ease;
    border-bottom: 2px solid yellowgreen;
+   color: #c5cae9;
+   transform: rotate(6deg);
 
 }
 .menu-icon a{
@@ -62,10 +65,12 @@ header .nav .nav-bar li a:hover {
     color: lightgreen;
     margin-left: 1rem;
     font-size: 130%;
+     display: block;
+     transition: all 0.3s ease-out;
 }
 .menu-icon a:hover {
     color: darkgreen;
-    transform: 0.4s ease;
+     transform: rotate(6deg);
 }
 #menu-bar{
     padding: 0.1rem 0.5rem;
@@ -102,11 +107,9 @@ header .nav .nav-bar li a:hover {
 
 /* small devices(tables & phones) */
 @media only screen and (max-width:768px) {
-
     #menu-bar {
         display: block;
     }
-
     .nav-bar {
         position: absolute;
         top: 100%;
@@ -115,11 +118,9 @@ header .nav .nav-bar li a:hover {
         background-color: #000;
         padding: 2rem;
     }
-
     .nav-bar.active {
         left: 0;
     }
-
     .nav-bar li {
         font-size: 2rem;
         padding: 1.2rem;
@@ -128,31 +129,13 @@ header .nav .nav-bar li a:hover {
         border: 1px solid yellowgreen;
         width: 100%;
         border-radius: 0.8rem;
-
-    }
+    } 
     
- /* .election-literature {
-     margin-top: 115%;
-     width: 800px;
- } */
- 
 }
 
 /* 640px */
-@media only screen and (max-width: 640px) {
-    /* .election-img{
-        width: 200px;
-    }
-    .main-img{
-        width: 4%;
-    } */
-    .election-literature{
-        margin-top: 10%;
-    }
-    .election-img {
-        margin-left: 150px;
-        
-    }
+@media only screen and (max-width:640px) {
+
 }
 
 /* 479px */
@@ -163,22 +146,11 @@ header .nav .nav-bar li a:hover {
         font-size: 10px;
 
     }
-    
-
 }
-
-
 /* hero section */
 
 .hero-section{
-    margin: 50px auto;
-}
-
-
-.main__content{
-    float: left;
-    max-width: 500px;
-    margin-top: 10%;
+    margin: 100px auto;
 }
 .main__content h1{
     font-size: 4rem;
@@ -186,6 +158,13 @@ header .nav .nav-bar li a:hover {
     max-width: 500px;
     flex: 1 1 30rem;
     animation: content .8s linear 1.2s backwards;
+}
+.flex-container{
+     max-width: 1200px;
+     margin: 0 auto;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+     grid-column-gap: 65px;
 }
 
 @keyframes content {
@@ -223,6 +202,7 @@ header .nav .nav-bar li a:hover {
     max-width: 100%;
     transform: rotate(-5deg);
     animation: slideImage .8s linear;
+    margin-left: 0;
 }
 
 @keyframes slideImage {
@@ -272,9 +252,10 @@ header .nav .nav-bar li a:hover {
     max-width: 50%;
     text-align: right;
 }
-.img-one {
+.img-two {
     position: relative;
-    left: 79px;
+    right: 79px;
+    z-index: -1;
 }
 
 .clearfix{
@@ -294,11 +275,11 @@ header .nav .nav-bar li a:hover {
 .img1{
     margin-top: 10%;
     float: left;
-    width: 20%;
+    width: 10%;
 }
 .img2{
     position: relative;
-    width: 20%;
+    width: 10%;
     float: right;
     bottom: 180px;
 }
@@ -319,44 +300,30 @@ header .nav .nav-bar li a:hover {
     font-size: 18px;
 }
 
-
+/* Static section */
 .img-responsive {
+    height: 100%;
    width: 100%;
 }
-/* Static section */
-.election-img {
-    /* display: flex; */
-    float: left;
-    width: 60%;
+.img-resize{
+    width: 100%;
 }
-.main-img{
-     height: 160%;
-     width: 100%;
-     border-radius: 30px;
-     position: relative;
-     top: 35px;
-     right: 50px;
-}
-.flex-wrap {
-    flex-wrap: wrap;
+.img-radius{
+     border-radius: 30px;  
+     /* border-radius: 300px; */
+     /* width: 350px; */
 }
 .static{
-    margin-top: 0px;
+    border: 1px solid red;
     background-color: green;
 }
-.election-literature{
-    float: right;
-    width: 500px;
-    text-align: left;
+.elect-lit{
     background-color: #fff;
     border-radius: 20px;
-    padding: 2%;
-
 }
-.election-literature p{
+.elect-lit p{
     padding: 0px 40px;
     margin: 50px 40px;
-
     /* border-left: 2px solid green; */
 }
 .p1{
@@ -364,15 +331,15 @@ header .nav .nav-bar li a:hover {
   
 }
 .p2{
-    border-left: 5px solid green;
+    border-left: 5px solid red;
 }
 .p3 {
     border-left: 5px solid yellow;
 }
 
 /* App. Advert Section */
-.app-ad{
-    margin-top: 3000px;
+.app_ad{
+    margin-top: 30px;
 }
 .app-yellow{
     background-color: yellow;
@@ -387,14 +354,12 @@ header .nav .nav-bar li a:hover {
 
 }
 .margin-top{
-    margin-top:200px;
+    margin-top:10%;
     margin-bottom: 0px;
+    margin-left: 90px;
    
 }
-/* .app-img{
-    float: left;
-    position: absolute;  
-} */
+
 .app-img img{
     max-width: 100%;
    
@@ -412,12 +377,15 @@ header .nav .nav-bar li a:hover {
 }
 .img3{
     float: right;
-    margin-right: 70px;
-    margin-top: 60px;
+    margin-right: 2%;
+    margin-top: 1%;
+    width: 10%;
 
 }
 .img4{
+    width: 10%;
     margin-top: 0px;
+    margin-left: 70px;
     text-align: left;
     position: relative;
     bottom: 100px;
@@ -437,7 +405,13 @@ header .nav .nav-bar li a:hover {
 }
 .app-info img{
     margin-top: 10%;
-    margin-left: 10%;
+    margin-left: 5%;
+    
+}
+.img-reduce{
+    display: flex;
+    width: 40%;
+    height: 50%;
 }
 /* What we do section */
 .we_do{
@@ -451,7 +425,7 @@ header .nav .nav-bar li a:hover {
    border-bottom-width: 1px 49px ;
    max-width: 70%;
    margin: 0 auto;
-   font-size: 45px;
+   font-size: 350%;
    font-weight: bold;
    color: mediumseagreen;
 }
@@ -472,7 +446,7 @@ header .nav .nav-bar li a:hover {
 }
 .list ul li{
     padding: 10px 0px;
-    font-size: 17px;
+    font-size: 150%;
     
 }
 
@@ -480,10 +454,6 @@ header .nav .nav-bar li a:hover {
 .footer__container {
     background-color: #141414;
     padding: 60px 45px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
 }
 
 #footer__logo {
@@ -514,12 +484,12 @@ header .nav .nav-bar li a:hover {
 }
 
  .footer__link--items {
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: 0px 90px;
     text-align: left;
-    max-width: 160px;
+    max-width: 100%;
     box-sizing: border-box;
 } 
 
