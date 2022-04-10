@@ -107,6 +107,9 @@ header .nav .nav-bar li a:hover {
         transform: translateX(-10px);
     }
 }
+/* .main__content{
+    max-width: 100px;
+} */
 .main__content p {
      padding: 20px 0px;
      font-size: 1rem;
